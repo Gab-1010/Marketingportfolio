@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Laniel Aquariums & Aquascaping</title>
-  <meta name="description" content="Aquarium fish, aquascaping supplies, and custom tank designs in Sharjah. Transforming water into living art." />
+  <title>Laniel Aquascape Showcase</title>
+  <meta name="description" content="Showcase of aquascaping projects, aquarium designs, and aquatic photography by Laniel." />
 
   <!-- Fonts & Lightbox -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -23,102 +23,51 @@
     body { margin:0; font-family:Inter, sans-serif; background:var(--bg); color:var(--text); }
     a { color:var(--accent); text-decoration:none; }
     .container { max-width:1080px; margin:auto; padding:24px; }
-    header { display:flex; justify-content:space-between; align-items:center; padding:12px 0; position:sticky; top:0; background:#ffffffcc; backdrop-filter:blur(6px); border-bottom:1px solid var(--border); }
-    nav a { margin-left:16px; color:var(--muted); }
-    h1,h2 { margin:0 0 12px; }
+    header { text-align:center; padding:20px 0; border-bottom:1px solid var(--border); background:#fff; }
+    header h1 { margin:0; font-size:32px; color:var(--accent); }
+    header p { color:var(--muted); margin:8px 0 0; }
     .section { margin:32px 0; }
-    .card { background:var(--card); border:1px solid var(--border); border-radius:12px; padding:24px; box-shadow:0 2px 6px rgba(0,0,0,0.05); }
-    .hero { display:grid; grid-template-columns:1.2fr 1fr; gap:24px; align-items:center; }
-    .gallery-grid, .video-grid { display:grid; grid-template-columns:repeat(3,1fr); gap:16px; }
+    h2 { margin-bottom:16px; color:var(--accent); }
+    .gallery-grid { display:grid; grid-template-columns:repeat(3,1fr); gap:16px; }
     .gallery-grid img { border-radius:8px; border:1px solid var(--border); }
-    .video iframe { width:100%; aspect-ratio:16/9; border-radius:8px; border:1px solid var(--border); }
     footer { text-align:center; padding:16px; color:var(--muted); border-top:1px solid var(--border); margin-top:32px; }
-    @media(max-width:900px){ .hero{grid-template-columns:1fr;} .gallery-grid,.video-grid{grid-template-columns:repeat(2,1fr);} }
-    @media(max-width:560px){ .gallery-grid,.video-grid{grid-template-columns:1fr;} }
+    @media(max-width:900px){ .gallery-grid{grid-template-columns:repeat(2,1fr);} }
+    @media(max-width:560px){ .gallery-grid{grid-template-columns:1fr;} }
   </style>
 </head>
 <body>
   <div class="container">
     <header>
-      <div class="brand">Laniel Aquariums</div>
-      <nav>
-        <a href="#products">Products</a>
-        <a href="#photos">Photos</a>
-        <a href="#videos">Videos</a>
-        <a href="#about">About</a>
-        <a href="#contact">Contact</a>
-      </nav>
+      <h1>Laniel Aquascape Showcase</h1>
+      <p>Transforming aquariums into living art</p>
     </header>
 
-    <!-- Hero -->
-    <section class="section hero">
-      <div class="card">
-        <h1>Transforming Water into Living Art</h1>
-        <p>We provide tropical fish, aquascaping supplies, and custom aquarium designs to bring nature indoors.</p>
-        <p><a href="#products">Explore Products →</a></p>
-      </div>
-      <div class="card">
-        <img src="images/hero-aquarium.jpg" alt="Aquascape showcase">
-      </div>
-    </section>
-
-    <!-- Products -->
-    <section id="products" class="section card">
-      <h2>Our Products & Services</h2>
-      <ul>
-        <li>🐟 Tropical Fish (Tetras, Bettas, Cichlids)</li>
-        <li>🌿 Aquascaping Supplies (plants, driftwood, rocks, substrates)</li>
-        <li>💡 Equipment (filters, lighting, tanks)</li>
-        <li>🎨 Custom Aquascape Design & Maintenance</li>
-      </ul>
-    </section>
-
     <!-- Photo Gallery -->
-    <section id="photos" class="section card">
-      <h2>Photo Gallery</h2>
+    <section id="photos" class="section">
+      <h2>My Aquascapes</h2>
       <div class="gallery-grid">
-        <a href="images/aquarium1.jpg" data-lightbox="gallery" data-title="Nature Aquascape — 120L">
-          <img src="images/aquarium1.jpg" alt="Aquarium aquascape">
+        <a href="images/aquascape1.jpg" data-lightbox="gallery" data-title="Nature Aquascape — 120L">
+          <img src="images/aquascape1.jpg" alt="Aquascape 1">
         </a>
-        <a href="images/fish1.jpg" data-lightbox="gallery" data-title="Neon Tetras — Tropical Fish">
-          <img src="images/fish1.jpg" alt="Tropical fish">
+        <a href="images/aquascape2.jpg" data-lightbox="gallery" data-title="Iwagumi Style — Stone Layout">
+          <img src="images/aquascape2.jpg" alt="Aquascape 2">
         </a>
-        <a href="images/plants1.jpg" data-lightbox="gallery" data-title="Aquatic Plants — Java Fern">
-          <img src="images/plants1.jpg" alt="Aquatic plants">
+        <a href="images/aquascape3.jpg" data-lightbox="gallery" data-title="Planted Tank — Tropical Fish">
+          <img src="images/aquascape3.jpg" alt="Aquascape 3">
+        </a>
+        <a href="images/aquascape4.jpg" data-lightbox="gallery" data-title="Dutch Style — Colorful Plants">
+          <img src="images/aquascape4.jpg" alt="Aquascape 4">
+        </a>
+        <a href="images/aquascape5.jpg" data-lightbox="gallery" data-title="Minimalist Aquascape — Clean Lines">
+          <img src="images/aquascape5.jpg" alt="Aquascape 5">
+        </a>
+        <a href="images/aquascape6.jpg" data-lightbox="gallery" data-title="Community Tank — Mixed Species">
+          <img src="images/aquascape6.jpg" alt="Aquascape 6">
         </a>
       </div>
     </section>
 
-    <!-- Video Gallery -->
-    <section id="videos" class="section card">
-      <h2>Video Gallery</h2>
-      <div class="video-grid">
-        <div class="video">
-          <iframe src="https://www.youtube.com/embed/VIDEO_ID?autoplay=0&controls=1"
-            title="Aquascaping Tutorial" allowfullscreen></iframe>
-        </div>
-        <div class="video">
-          <iframe src="https://www.youtube.com/embed/VIDEO_ID2?autoplay=0&controls=1"
-            title="Fish Care Guide" allowfullscreen></iframe>
-        </div>
-      </div>
-    </section>
-
-    <!-- About -->
-    <section id="about" class="section card">
-      <h2>About Us</h2>
-      <p>Laniel Aquariums is based in Sharjah, UAE. We specialize in aquascaping, tropical fish, and aquarium supplies. Our mission is to bring the beauty of underwater worlds into homes and businesses.</p>
-    </section>
-
-    <!-- Contact -->
-    <section id="contact" class="section card">
-      <h2>Contact</h2>
-      <p>Email: <a href="mailto:hello@lanielaquariums.com">hello@lanielaquariums.com</a></p>
-      <p>WhatsApp: +971-XXX-XXXXXX</p>
-      <p>Social: <a href="https://instagram.com/yourhandle">Instagram</a> · <a href="https://youtube.com/@yourhandle">YouTube</a></p>
-    </section>
-
-    <footer>© <span id="y"></span> Laniel Aquariums</footer>
+    <footer>© <span id="y"></span> Laniel Aquascapes</footer>
   </div>
 
   <script>document.getElementById('y').textContent = new Date().getFullYear();</script>
