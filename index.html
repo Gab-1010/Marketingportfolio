@@ -12,20 +12,27 @@
   <link href="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.3/css/lightbox.min.css" rel="stylesheet">
 
   <style>
-    :root { --bg:#0b0f17; --card:#121826; --accent:#4fd1c5; --text:#e6edf7; --muted:#93a4b8; --border:#1f2637; }
+    :root {
+      --bg:#f9fdfc; 
+      --card:#ffffff; 
+      --accent:#2ca58d; 
+      --text:#222; 
+      --muted:#555; 
+      --border:#dce5e3;
+    }
     body { margin:0; font-family:Inter, sans-serif; background:var(--bg); color:var(--text); }
     a { color:var(--accent); text-decoration:none; }
     .container { max-width:1080px; margin:auto; padding:24px; }
-    header { display:flex; justify-content:space-between; align-items:center; padding:12px 0; position:sticky; top:0; background:rgba(11,15,23,0.9); backdrop-filter:blur(6px); }
+    header { display:flex; justify-content:space-between; align-items:center; padding:12px 0; position:sticky; top:0; background:#ffffffcc; backdrop-filter:blur(6px); border-bottom:1px solid var(--border); }
     nav a { margin-left:16px; color:var(--muted); }
     h1,h2 { margin:0 0 12px; }
     .section { margin:32px 0; }
-    .card { background:var(--card); border:1px solid var(--border); border-radius:16px; padding:24px; }
+    .card { background:var(--card); border:1px solid var(--border); border-radius:12px; padding:24px; box-shadow:0 2px 6px rgba(0,0,0,0.05); }
     .hero { display:grid; grid-template-columns:1.2fr 1fr; gap:24px; align-items:center; }
     .gallery-grid, .video-grid { display:grid; grid-template-columns:repeat(3,1fr); gap:16px; }
-    .gallery-grid img { border-radius:12px; border:1px solid var(--border); }
-    .video iframe { width:100%; aspect-ratio:16/9; border-radius:12px; border:1px solid var(--border); }
-    footer { text-align:center; padding:16px; color:var(--muted); }
+    .gallery-grid img { border-radius:8px; border:1px solid var(--border); }
+    .video iframe { width:100%; aspect-ratio:16/9; border-radius:8px; border:1px solid var(--border); }
+    footer { text-align:center; padding:16px; color:var(--muted); border-top:1px solid var(--border); margin-top:32px; }
     @media(max-width:900px){ .hero{grid-template-columns:1fr;} .gallery-grid,.video-grid{grid-template-columns:repeat(2,1fr);} }
     @media(max-width:560px){ .gallery-grid,.video-grid{grid-template-columns:1fr;} }
   </style>
