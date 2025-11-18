@@ -4,7 +4,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Laniel Aquascape Showcase</title>
-  <meta name="description" content="Showcase of aquascaping projects, aquarium designs, and aquatic photography by Laniel." />
+  <meta name="description" content="Bright, clean showcase of aquascaping projects, aquarium designs, and aquatic photography by Laniel in Sharjah, UAE." />
 
   <!-- Fonts & Lightbox -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -13,58 +13,146 @@
 
   <style>
     :root {
-      --bg:#f9fdfc; 
+      --bg:#f7fbfa; 
       --card:#ffffff; 
-      --accent:#2ca58d; 
-      --text:#222; 
-      --muted:#555; 
-      --border:#dce5e3;
+      --accent:#17a2a4; 
+      --accent-2:#58c087;
+      --text:#1e1f20; 
+      --muted:#59636b; 
+      --border:#d9e6e2;
     }
-    body { margin:0; font-family:Inter, sans-serif; background:var(--bg); color:var(--text); }
+    * { box-sizing:border-box; }
+    body { margin:0; font-family:Inter, system-ui, -apple-system, Segoe UI, Roboto, sans-serif; background:var(--bg); color:var(--text); }
     a { color:var(--accent); text-decoration:none; }
-    .container { max-width:1080px; margin:auto; padding:24px; }
-    header { text-align:center; padding:20px 0; border-bottom:1px solid var(--border); background:#fff; }
-    header h1 { margin:0; font-size:32px; color:var(--accent); }
-    header p { color:var(--muted); margin:8px 0 0; }
-    .section { margin:32px 0; }
-    h2 { margin-bottom:16px; color:var(--accent); }
+    img { display:block; max-width:100%; height:auto; }
+    .container { max-width:1100px; margin:0 auto; padding:24px; }
+    header { display:flex; align-items:center; justify-content:space-between; padding:14px 0; position:sticky; top:0; background:#ffffffd9; backdrop-filter:blur(6px); border-bottom:1px solid var(--border); z-index:10; }
+    .brand { font-weight:800; color:var(--accent); }
+    nav a { margin-left:16px; color:var(--muted); }
+    .section { margin:28px 0; }
+    .card { background:var(--card); border:1px solid var(--border); border-radius:12px; padding:24px; box-shadow:0 2px 8px rgba(0,0,0,0.04); }
+    h1 { margin:8px 0 8px; font-size:34px; color:#0f6c6e; }
+    h2 { margin:0 0 14px; font-size:22px; color:#0f6c6e; }
+    p { color:var(--muted); line-height:1.65; }
+    .hero { display:grid; grid-template-columns:1.15fr 1fr; gap:24px; align-items:center; }
+    .hero .preview { border-radius:12px; overflow:hidden; border:1px solid var(--border); }
+    .cta { display:flex; gap:10px; margin-top:12px; flex-wrap:wrap; }
+    .btn { display:inline-block; padding:10px 14px; border-radius:10px; border:1px solid var(--border); color:var(--text); background:#fff; }
+    .btn.accent { background:var(--accent-2); color:#073a29; border-color:transparent; font-weight:600; }
+    .pill { display:inline-block; padding:6px 10px; border-radius:999px; background:#eef7f5; border:1px solid var(--border); color:#2c6b63; font-size:12px; }
     .gallery-grid { display:grid; grid-template-columns:repeat(3,1fr); gap:16px; }
-    .gallery-grid img { border-radius:8px; border:1px solid var(--border); }
-    footer { text-align:center; padding:16px; color:var(--muted); border-top:1px solid var(--border); margin-top:32px; }
-    @media(max-width:900px){ .gallery-grid{grid-template-columns:repeat(2,1fr);} }
-    @media(max-width:560px){ .gallery-grid{grid-template-columns:1fr;} }
+    .thumb { border-radius:10px; overflow:hidden; border:1px solid var(--border); }
+    .thumb img { width:100%; aspect-ratio:4/3; object-fit:cover; }
+    .video-grid { display:grid; grid-template-columns:repeat(3,1fr); gap:16px; }
+    .video { border-radius:10px; overflow:hidden; border:1px solid var(--border); background:#fff; }
+    .video iframe { width:100%; aspect-ratio:16/9; border:0; }
+    .info-columns { display:grid; grid-template-columns:1fr 1fr; gap:16px; }
+    footer { text-align:center; padding:18px 0; color:var(--muted); border-top:1px solid var(--border); margin-top:28px; }
+    @media (max-width:980px){ .hero{grid-template-columns:1fr;} .gallery-grid,.video-grid{grid-template-columns:repeat(2,1fr);} .info-columns{grid-template-columns:1fr;} }
+    @media (max-width:560px){ .gallery-grid,.video-grid{grid-template-columns:1fr;} h1{font-size:28px;} }
   </style>
 </head>
 <body>
   <div class="container">
+    <!-- Header -->
     <header>
-      <h1>Laniel Aquascape Showcase</h1>
-      <p>Transforming aquariums into living art</p>
+      <div class="brand">Laniel Aquascapes</div>
+      <nav>
+        <a href="#photos">Photos</a>
+        <a href="#videos">Videos</a>
+        <a href="#about">About</a>
+        <a href="#contact">Contact</a>
+      </nav>
     </header>
 
+    <!-- Hero -->
+    <section class="section hero">
+      <div class="card">
+        <span class="pill">Aquascaping • Aquariums • Photography</span>
+        <h1>Aquascapes that bring nature indoors</h1>
+        <p>I design and capture bright, balanced aquascapes—showcasing plants, rockwork, and fish in harmony.</p>
+        <div class="cta">
+          <a class="btn accent" href="#photos">View photo gallery</a>
+          <a class="btn" href="#videos">Watch videos</a>
+        </div>
+      </div>
+      <div class="preview">
+        <img src="images/hero-aquascape.jpg" alt="Featured aquascape">
+      </div>
+    </section>
+
     <!-- Photo Gallery -->
-    <section id="photos" class="section">
-      <h2>My Aquascapes</h2>
+    <section id="photos" class="section card">
+      <h2>Photo gallery</h2>
+      <p>Click any photo to view it larger.</p>
       <div class="gallery-grid">
-        <a href="images/aquascape1.jpg" data-lightbox="gallery" data-title="Nature Aquascape — 120L">
+        <a class="thumb" href="images/aquascape1.jpg" data-lightbox="gallery" data-title="Nature style — 120L, Java fern, driftwood">
           <img src="images/aquascape1.jpg" alt="Aquascape 1">
         </a>
-        <a href="images/aquascape2.jpg" data-lightbox="gallery" data-title="Iwagumi Style — Stone Layout">
+        <a class="thumb" href="images/aquascape2.jpg" data-lightbox="gallery" data-title="Iwagumi — Seiryu stone, simple plants">
           <img src="images/aquascape2.jpg" alt="Aquascape 2">
         </a>
-        <a href="images/aquascape3.jpg" data-lightbox="gallery" data-title="Planted Tank — Tropical Fish">
+        <a class="thumb" href="images/aquascape3.jpg" data-lightbox="gallery" data-title="Dutch style — colorful stems, strong contrast">
           <img src="images/aquascape3.jpg" alt="Aquascape 3">
         </a>
-        <a href="images/aquascape4.jpg" data-lightbox="gallery" data-title="Dutch Style — Colorful Plants">
+        <a class="thumb" href="images/fish1.jpg" data-lightbox="gallery" data-title="Neon tetras — schooling fish">
+          <img src="images/fish1.jpg" alt="Neon tetras">
+        </a>
+        <a class="thumb" href="images/plants1.jpg" data-lightbox="gallery" data-title="Aquatic plants — Java fern close-up">
+          <img src="images/plants1.jpg" alt="Aquatic plants">
+        </a>
+        <a class="thumb" href="images/aquascape4.jpg" data-lightbox="gallery" data-title="Minimalist layout — negative space focus">
           <img src="images/aquascape4.jpg" alt="Aquascape 4">
         </a>
-        <a href="images/aquascape5.jpg" data-lightbox="gallery" data-title="Minimalist Aquascape — Clean Lines">
-          <img src="images/aquascape5.jpg" alt="Aquascape 5">
-        </a>
-        <a href="images/aquascape6.jpg" data-lightbox="gallery" data-title="Community Tank — Mixed Species">
-          <img src="images/aquascape6.jpg" alt="Aquascape 6">
-        </a>
       </div>
+    </section>
+
+    <!-- Video Gallery -->
+    <section id="videos" class="section card">
+      <h2>Video gallery</h2>
+      <p>Manual play enabled—press play to watch.</p>
+      <div class="video-grid">
+        <div class="video">
+          <iframe src="https://www.youtube.com/embed/VIDEO_ID_1?autoplay=0&controls=1"
+            title="Aquascaping tutorial — hardscape to planted"
+            allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+            allowfullscreen></iframe>
+        </div>
+        <div class="video">
+          <iframe src="https://www.youtube.com/embed/VIDEO_ID_2?autoplay=0&controls=1"
+            title="Tank walkthrough — 120L nature style"
+            allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+            allowfullscreen></iframe>
+        </div>
+        <div class="video">
+          <iframe src="https://player.vimeo.com/video/VIDEO_ID_3?autoplay=0"
+            title="Fish care tips — community tank"
+            allow="fullscreen; picture-in-picture"
+            allowfullscreen></iframe>
+        </div>
+      </div>
+    </section>
+
+    <!-- About -->
+    <section id="about" class="section card">
+      <h2>About</h2>
+      <div class="info-columns">
+        <div>
+          <p>I’m Laniel, based in Sharjah, UAE. I create aquascapes with a focus on balance, light, and plant health—capturing them through bright photography.</p>
+        </div>
+        <div>
+          <p><strong>Styles:</strong> Nature, Iwagumi, Dutch, Minimalist</p>
+          <p><strong>Focus:</strong> Plant growth, water clarity, natural composition</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact -->
+    <section id="contact" class="section card">
+      <h2>Contact</h2>
+      <p><strong>Email:</strong> <a href="mailto:hello@lanielaquascapes.com">hello@lanielaquascapes.com</a></p>
+      <p><strong>WhatsApp:</strong> +971-XXX-XXXXXX</p>
+      <p><strong>Social:</strong> <a href="https://instagram.com/yourhandle" target="_blank" rel="noopener">Instagram</a> · <a href="https://youtube.com/@yourhandle" target="_blank" rel="noopener">YouTube</a></p>
     </section>
 
     <footer>© <span id="y"></span> Laniel Aquascapes</footer>
